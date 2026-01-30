@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Readout – The summary leaders actually read</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#0b0d10;
+  --fg:#e6eaf0;
+  --muted:#9aa4b2;
+  --accent:#6ee7b7;
+  --border:rgba(255,255,255,0.08);
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter,system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--fg);
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:96px 24px;
+  animation:fadeUp .8s ease both;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(16px)}
+  to{opacity:1;transform:none}
+}
+
+h1{
+  font-size:clamp(3rem,6vw,4rem);
+  letter-spacing:-0.03em;
+  margin:0 0 12px;
+}
+
+h2{font-size:2rem;margin-bottom:12px}
+
+p{
+  color:var(--muted);
+  max-width:720px;
+  font-size:1.15rem;
+}
+
+.buttons{
+  margin-top:32px;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+a.button{
+  padding:14px 22px;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+
+a.button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.primary{background:var(--accent);color:#000}
+.secondary{border:1px solid var(--border);color:var(--fg)}
+
+section{margin-top:120px}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
+}
+
+.card{
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:24px;
+  transition:transform .2s ease;
+}
+
+.card:hover{transform:translateY(-4px)}
+
+.example{
+  background:rgba(0,0,0,.4);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:24px;
+}
+
+input{
+  background:#000;
+  border:1px solid var(--border);
+  padding:14px;
+  border-radius:10px;
+  color:var(--fg);
+  width:280px;
+}
+
+button{
+  padding:14px 22px;
+  border-radius:10px;
+  background:var(--accent);
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+}
+
+footer{
+  margin-top:120px;
+  border-top:1px solid var(--border);
+  padding-top:48px;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Readout</h1>
+  <p><strong>The summary leaders actually read.</strong></p>
+  <p>
+    Readout turns complex performance data into clear,
+    decision-ready summaries. No dashboards. No noise.
+  </p>
+
+  <div class="buttons">
+    <a href="preview.html" class="button primary">View product preview</a>
+    <a href="#early" class="button secondary">Join early access</a>
+  </div>
+</div>
+
+<div class="container">
+
+<section>
+  <h2>Why dashboards fail</h2>
+  <p>
+    Leaders don’t read charts. They read conclusions.
+    Most reports are ignored because they never answer
+    what to do next.
+  </p>
+</section>
+
+<section>
+  <h2>The Readout model</h2>
+  <div class="grid">
+    <div class="card">
+      <strong>What changed</strong>
+      <p>Only meaningful movement, clearly stated.</p>
+    </div>
+    <div class="card">
+      <strong>Why it matters</strong>
+      <p>Business impact, not metric noise.</p>
+    </div>
+    <div class="card">
+      <strong>What to do next</strong>
+      <p>Clear direction without meetings.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Example Readout</h2>
+  <div class="example">
+    <p>
+      Traffic increased 12% month-over-month,
+      driven primarily by paid search.
+      Conversion rate declined slightly on mobile.
+      <br><br>
+      Recommendation: improve mobile performance
+      before increasing spend.
+    </p>
+  </div>
+</section>
+
+<section id="early">
+  <h2>Early access</h2>
+  <p>Join the waitlist to shape the product.</p>
+
+  <!-- Replace action with Formspree later -->
+  <form>
+    <input type="email" placeholder="you@company.com" required />
+    <button type="submit">Request access</button>
+  </form>
+</section>
+
+<footer>
+  <p>Readout. From data to decisions.</p>
+</footer>
+
+</div>
+</body>
+</html>
